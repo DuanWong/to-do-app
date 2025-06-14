@@ -1,7 +1,7 @@
 {
   "name": "to-do",
   "version": "0.1.0",
-  "homepage": "https://duanwong.github.io/itask",
+  "homepage": "https://duanwong.github.io/to-do-app",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
