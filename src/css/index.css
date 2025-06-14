@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+body {
+  background: #f1f2f3
+  url(https://cdn.dribbble.com/userupload/22257206/file/original-823750a6ae59eb6fd5857fa2aa95b589.jpg?resize=752x&vertical=center)
+  center center / cover no-repeat; 
+}
+
+.container {
+  width:min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+.logo {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.create-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.create-item input {
+  width: 50%;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  transition: border-color 0.3s ease;
+}
+
+.create-item input:focus {
+  border-color: #3872ee;
+}
+
+.create-item button {
+  width:100px;
+  height:40px;
+  padding: 8px 0;
+  margin-left: 10px;
+  background-color: #3872ee;
+  border-radius: 10px;
+  color:#fff;
+}
+
+.create-item button:hover {
+  background-color: #1441a1;
+  transition: 0.5s;
+}
+
+.display-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.maintain-item {
+  padding: 10px;
+  background-color: #f1e469;
+  border-radius: 10px;
+  width: 350px; 
+  word-wrap: break-word; 
+}
+
+.maintain-item.completed {
+  background-color: #d4edda;
+}
+
+.button-group {
+  margin-top: 5px;
+}
+
+.button-group button {
+  margin-right: 15px;
+  background-color: transparent;
+}
+
+.button-group svg {
+  color:#4b5663;
+  transition: transform 0.2s ease;
+}
+
+.button-group button:hover svg {
+  transform: scale(1.2);
+}
+
+.editing {
+  display: grid;
+}
+
+.date-btn {
+  display:flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #4b5663;
+}
+
+.editing-btn-group {
+  display: flex;
+  gap:20px;
+  margin-top:20px;
+  justify-content: center;
+}
+
+.btn-save {
+  width:60px;
+  border-radius: 5px;
+  height: 30px;
+  color:#fff;
+  background-color: #62b374;
+}
+
+.btn-save:hover {
+  background-color: #2f5537;
+  transition: 0.5s;
+}
+
+.btn-cancel {
+  width:60px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: transparent;
+  border: solid 1px #62b374; 
+}
+
+.btn-cancel:hover {
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.editing input {
+  border-radius: 5px;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
