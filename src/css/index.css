@@ -4,6 +4,8 @@ body {
   background: #f1f2f3
   url(https://cdn.dribbble.com/userupload/22257206/file/original-823750a6ae59eb6fd5857fa2aa95b589.jpg?resize=752x&vertical=center)
   center center / cover no-repeat; 
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -12,8 +14,9 @@ body {
 }
 
 .logo {
-  margin-top: 100px;
+  padding-top: 100px;
   text-align: center;
+  color:#1c2631;
 }
 
 .create-item {
@@ -34,7 +37,7 @@ body {
 }
 
 .create-item input:focus {
-  border-color: #3872ee;
+  border-color: #10882c;
 }
 
 .create-item button {
@@ -42,14 +45,14 @@ body {
   height:40px;
   padding: 8px 0;
   margin-left: 10px;
-  background-color: #3872ee;
+  background-color: #10882c;
   border-radius: 10px;
-  color:#fff;
+  color:#e2e2c5;
+  transition: ease-in-out 0.5s;
 }
 
 .create-item button:hover {
-  background-color: #1441a1;
-  transition: 0.5s;
+  background-color: #48aa5f;
 }
 
 .display-item {
@@ -62,7 +65,8 @@ body {
   padding: 10px;
   background-color: #f1e469;
   border-radius: 10px;
-  width: 350px; 
+  width: 350px;
+  height: auto; 
   word-wrap: break-word; 
 }
 
@@ -70,12 +74,8 @@ body {
   background-color: #d4edda;
 }
 
-.button-group {
-  margin-top: 5px;
-}
-
 .button-group button {
-  margin-right: 15px;
+  margin-left: 15px;
   background-color: transparent;
 }
 
@@ -92,11 +92,17 @@ body {
   display: grid;
 }
 
+.task-text {
+  height:60%;
+  margin-bottom: 10px;
+}
+
 .date-btn {
+  height: 40%;
   display:flex;
   justify-content: space-between;
   font-size: 13px;
-  margin-top: 15px;
+  align-items: center;
   color: #4b5663;
 }
 
@@ -138,4 +144,38 @@ body {
   padding: 0 10px;
   height: 30px;
   line-height: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logo-spin {
+  animation: spin 2s linear infinite;
+}
+
+main {
+  min-height: calc(100vh - 170px);
+  margin-bottom: 100px;
+}
+
+footer {
+  display:flex;
+  gap:20px;
+  height:70px;
+  width: 100%;
+  justify-content: center;
+  align-items:center;
+}
+
+footer p {
+  font-size: 20px;
+  color: #2c3947;
+  font-weight: 500;
+}
+
+footer img {
+  width:40px;
+  height:40px;
 }

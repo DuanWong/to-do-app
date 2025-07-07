@@ -2,6 +2,7 @@ import { useReducer, useEffect } from 'react';
 import CreateItem from './components/CreateItem';
 import DisplayItem from './components/DisplayItem';
 import './css/index.css';
+import logo from './img/React-icon.png';
 
 const initialState = {
   tasks: JSON.parse(localStorage.getItem('tasks')) || [],
@@ -84,10 +85,17 @@ function App() {
   }, [state.tasks]);
 
   return (
-    <div className="container">
-      <h1 className="logo">iTask</h1>
-      <CreateItem dispatch={dispatch} />
-      <DisplayItem state={state} dispatch={dispatch} />
+    <div>
+      <main className="container">
+        <h1 className="logo">iTask</h1>
+        <CreateItem dispatch={dispatch} />
+        <DisplayItem state={state} dispatch={dispatch} />
+      </main>
+      <footer>
+        <p>Powered by</p>
+        <img src={logo} className="logo-spin" alt="logo" /> 
+        <p>React</p>
+      </footer>
     </div>
   );
 }

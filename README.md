@@ -1,9 +1,10 @@
 # iTask - Todo App
 
-This is a simple Todo application built with **React** using the `useReducer` 
-hook for state management.  
-The project also uses `react-hook-form` for form handling and `localStorage` 
-for data persistence.
+**iTask** is a clean, responsive, and intuitive Todo app built with **React**.  
+It helps you stay organized and boost productivity by managing your daily tasks with ease.
+
+Unlike typical todo apps, **iTask** leverages modern React features like `useReducer` for structured state management and `react-hook-form` for seamless form handling.  
+Your tasks are automatically saved using `localStorage`, so you’ll never lose your progress — even after a page refresh.
 
 ## Features
 

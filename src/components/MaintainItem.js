@@ -39,7 +39,7 @@ function MaintainItem({ task, state, dispatch }) {
         </form>
       ) : (
         <>
-          <h3>{task.text}</h3>
+          <div className="task-text"><h3>{task.text}</h3></div>
           <div className="date-btn">
             <p>{task.date}</p>
             <div className="button-group">
