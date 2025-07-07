@@ -57,6 +57,7 @@ body {
 
 .display-item {
   display: grid;
+  justify-items:center;
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
 }
@@ -179,3 +180,18 @@ footer img {
   width:40px;
   height:40px;
 }
+
+@media screen and (max-width: 1200px) {
+  .display-item {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .display-item {
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 20px; 
+  }
+}
+
