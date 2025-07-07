@@ -51,7 +51,8 @@ function reducer(state, action) {
         ...state,
         tasks: state.tasks.map(task =>
           task.id === action.payload.id
-            ? { ...task, text: action.payload.text, 
+            ? { ...task, text: action.payload.text,
+                completed: !task.completed,
                 date: new Date().toLocaleString('en-US', { 
                   month: 'short', 
                   day: 'numeric', 
