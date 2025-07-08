@@ -14,7 +14,7 @@ body {
 }
 
 .logo {
-  padding-top: 100px;
+  padding-top: 40px;
   text-align: center;
   color:#1c2631;
 }
@@ -22,9 +22,7 @@ body {
 .create-item {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  margin-bottom: 80px;
+  margin: 40px 0;
 }
 
 .create-item input {
