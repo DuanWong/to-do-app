@@ -43,13 +43,16 @@ function MaintainItem({ task, state, dispatch }) {
           <div className="date-btn">
             <p>{task.date}</p>
             <div className="button-group">
-              <button onClick={() => dispatch({ type: 'TOGGLE_COMPLETE', payload: task.id })}>
+              <button 
+                onClick={() => dispatch({ type: 'TOGGLE_COMPLETE', payload: task.id })}
+                title={task.completed ? 'Mark as Incomplete' : 'Mark as complete'}
+              >
                 {task.completed ? <FaUndo /> : <FaCheck />}
               </button>
-              <button onClick={() => dispatch({ type: 'START_EDIT', payload: task })}>
+              <button title="Edit" onClick={() => dispatch({ type: 'START_EDIT', payload: task })}>
                 <FaEdit />
               </button>
-              <button onClick={() => dispatch({ type: 'DELETE_TASK', payload: task.id })}>
+              <button title="Delete" onClick={() => dispatch({ type: 'DELETE_TASK', payload: task.id })}>
                 <FaTrash />
               </button>
             </div>

@@ -10,6 +10,17 @@ const initialState = {
   editingText: '',
 };
 
+function getFormattedDateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始
+  const day = String(now.getDate()).padStart(2, '0');
+  const hour = String(now.getHours()).padStart(2, '0');
+  const minute = String(now.getMinutes()).padStart(2, '0');
+
+  return `${year}-${month}-${day} ${hour}:${minute}`;
+}
+
 function reducer(state, action) {
   switch (action.type) {
     case 'ADD_TASK':
@@ -49,20 +60,22 @@ function reducer(state, action) {
     case 'UPDATE_TASK':
       return {
         ...state,
-        tasks: state.tasks.map(task =>
-          task.id === action.payload.id
-            ? { ...task, text: action.payload.text,
+        tasks: state.tasks.map(task => {
+          if (task.id === action.payload.id && task.completed) {
+            return {
+              ...task, text: action.payload.text,
                 completed: !task.completed,
-                date: new Date().toLocaleString('en-US', { 
-                  month: 'short', 
-                  day: 'numeric', 
-                  hour: '2-digit', 
-                  minute: '2-digit',
-                  second: '2-digit',
-                  hour12: false
-                }) }
-            : task
-        ),
+                date: getFormattedDateTime()
+            }
+          } else if (task.id === action.payload.id && !task.completed) {
+            return {
+              ...task, text: action.payload.text,
+              date: getFormattedDateTime()
+            }
+          } else {
+            return task;
+          }
+        }),
         editingId: null,
         editingText: '',
       };
