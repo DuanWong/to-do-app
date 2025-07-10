@@ -39,7 +39,7 @@ body {
 }
 
 .create-item button {
-  width:100px;
+  width:10%;
   height:40px;
   padding: 8px 0;
   margin-left: 10px;
@@ -190,6 +190,20 @@ footer img {
   .display-item {
     grid-template-columns: repeat(1, 1fr); 
     gap: 20px; 
+    place-items: center;
   }
+
+  
 }
 
+@media screen and (max-width: 480px) {
+  .create-item input {
+    width:80%;
+  }
+
+  .create-item button {
+    width:20%;
+  }
+
+
+}
